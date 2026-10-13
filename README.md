@@ -47,4 +47,4 @@ Server 2016 domain on VMware with Windows 10 clients. Next up: a side-by-side mi
 
 ### `$ ./contact.sh`
 
-[LinkedIn](https://www.linkedin.com/in/itprofessionalakash/) · [akashbahl1926@gmail.com](mailto:akashbahl1926@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/akashbahl-toronto/) · [akashbahl1926@gmail.com](mailto:akashbahl1926@gmail.com)
