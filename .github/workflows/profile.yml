@@ -1,0 +1,78 @@
+# Keeps the profile README's visuals fresh.
+#   1. assets/header.svg     scripts/build_header.py (the "Latest" row comes from the GitHub API)
+#   2. metrics.terminal.svg  lowlighter/metrics, terminal template, restyled to match the header
+# Runs daily, on every push to the default branch, and on demand from the Actions tab.
+name: Profile
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # 06:17 UTC daily, off the hour to avoid the scheduler rush
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build header
+        run: python3 scripts/build_header.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PROFILE_USER: ${{ github.repository_owner }}
+
+      - name: Commit header if it changed
+        run: |
+          if git diff --quiet -- assets/header.svg; then
+            echo "header.svg unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/header.svg
+          git commit -m "chore: refresh header.svg [skip ci]"
+          git push
+
+      - name: Render terminal metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # Classic personal access token with NO scopes, stored as a repo secret.
+          # Scopeless means it can only read public data.
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics.terminal.svg
+          template: terminal
+          base: header, metadata
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+          config_timezone: America/Toronto
+          # GitHub dark palette, same as assets/header.svg. The attribute selectors
+          # remap GitHub's light-mode contribution greens for a dark background.
+          extras_css: |
+            .header{background:#161b22!important;height:30px!important;padding:0 10px!important;border:1px solid #30363d}
+            .title{color:#8b949e!important;font-size:12px!important}
+            .button{background:#30363d!important;color:#8b949e!important;width:13px!important;height:13px!important;align-items:center;margin-right:7px!important;text-shadow:none!important}
+            .button.exit{background:#f85149!important;color:#0d1117!important}
+            pre{background:#0d1117!important;color:#c9d1d9!important;border:1px solid #30363d;border-top:none}
+            .banner,footer{color:#8b949e!important}
+            .ps1-path{color:#3fb950!important;font-weight:bold}
+            .ps1-location{color:#58a6ff!important}
+            b{color:#e6edf3}
+            span[style*="#ebedf0"]{color:#30363d!important}
+            span[style*="#9be9a8"],span[style*="#aceebb"]{color:#196c2e!important}
+            span[style*="#40c463"],span[style*="#4ac26b"]{color:#2ea043!important}
+            span[style*="#30a14e"],span[style*="#2da44e"]{color:#3fb950!important}
+            span[style*="#216e39"],span[style*="#116329"]{color:#56d364!important}
+            path[fill="#ebedf0"]{fill:#21262d}
+            path[fill="#9be9a8"],path[fill="#aceebb"]{fill:#0e4429}
+            path[fill="#40c463"],path[fill="#4ac26b"]{fill:#006d32}
+            path[fill="#30a14e"],path[fill="#2da44e"]{fill:#26a641}
+            path[fill="#216e39"],path[fill="#116329"]{fill:#39d353}
