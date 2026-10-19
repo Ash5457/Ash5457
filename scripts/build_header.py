@@ -54,7 +54,7 @@ INFO = [
     ("OS", "Fedora Linux · Hyprland"),
     ("Role", "IT support → security"),
     ("Certs", "CompTIA A+ {green:✓} · Security+ {amber:(studying)}"),
-    ("Lab", "Windows Server AD · Tailscale mesh"),
+    ("Labs", "AD build & migration · Fedora hardening"),
     ("Base", "Keswick, ON · York Region / GTA"),
     ("Latest", None),
     ("Status", "{green:●} open to helpdesk & junior SOC roles"),
