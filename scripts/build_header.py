@@ -53,8 +53,8 @@ BANNER = """\
 INFO = [
     ("OS", "Fedora Linux · Hyprland"),
     ("Role", "IT support → security"),
-    ("Certs", "CompTIA A+ {green:✓} · Security+ {amber:(studying)}"),
-    ("Labs", "AD build & migration · Fedora hardening"),
+    ("Certs", "CompTIA A+ {green:✓} · Azure/M365 {amber:(next)}"),
+    ("Labs", "AD 2016→2025 migration · Fedora hardening"),
     ("Base", "Keswick, ON · York Region / GTA"),
     ("Latest", None),
     ("Status", "{green:●} open to helpdesk & junior SOC roles"),

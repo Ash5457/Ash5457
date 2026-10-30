@@ -6,7 +6,7 @@
 -->
 
 <p align="center">
-  <img src="assets/header.svg" alt="ash@fedora running fastfetch: Akash Bahl, IT support moving into security. CompTIA A+, studying Security+. Windows Server AD and Tailscale labs. Keswick, Ontario. Open to helpdesk and junior SOC roles." />
+  <img src="assets/header.svg" alt="ash@fedora running fastfetch: Akash Bahl, IT support moving into security. CompTIA A+ certified, working toward a Microsoft Azure/M365 cert. Windows Server AD and Tailscale labs. Keswick, Ontario. Open to helpdesk and junior SOC roles." />
 </p>
 
 <p align="center">
@@ -33,11 +33,11 @@ I learn by building on my own hardware, then writing up what broke and how I fix
 **[secure-remote-access](https://github.com/Ash5457/secure-remote-access)** · `RDP` `Tailscale` `WireGuard` `Windows Firewall` `Fedora`\
 Encrypted remote desktop from a Fedora laptop to a Windows 11 Pro machine over public Wi-Fi, with RDP never exposed to the internet. Walks through a layer-by-layer diagnosis of a Kerberos/NTLM logon failure and a routing conflict between two WireGuard-based tools.
 
+**[ad-lab](https://github.com/Ash5457/ad-lab)** · `Windows Server` `AD DS` `PowerShell` `Group Policy` `DNS`\
+An Active Directory domain built entirely from PowerShell scripts on Server 2016, then migrated side by side to Server 2025: schema extension, replication checks, all five FSMO roles transferred, a scream test with the old DC powered off, a clean demotion and the functional-level raise. Every step links to a screenshot or transcript, and the [troubleshooting log](https://github.com/Ash5457/ad-lab/blob/main/TROUBLESHOOTING.md) covers 11 problems, including a DC blue-screening mid-migration.
+
 **[fedora-hardening](https://github.com/Ash5457/fedora-hardening)** · `LUKS` `btrfs` `systemd` `firewalld` `SELinux` `Bash` · *in progress*\
 Auditing and hardening my daily-driver Fedora laptop across eight modules: disk, packages, logs, systemd, sudo, firewalld, SELinux and power. Each module records the findings, the changes, how I verified them and how to roll back. Every output is redacted and scanned for secrets by script before it is published. [Module 01](https://github.com/Ash5457/fedora-hardening/blob/main/01-disk-layout/NOTES.md) maps the LUKS2 and btrfs layout and backs up the LUKS header off-machine.
-
-**[ad-lab](https://github.com/Ash5457/ad-lab)** · `Windows Server` `AD DS` `PowerShell` `Group Policy` · *in progress*\
-A scripted Active Directory build on Windows Server 2016, then a side-by-side migration to Server 2025: new DC, FSMO transfer, health checks with dcdiag, and demoting the old DC. A second lab will attack and then harden a deliberately vulnerable domain.
 
 **[HackDetect](https://github.com/Ash5457/HackDetect)** · `Python` `OOP`\
 Terminal social deduction game built for a university game studies course. Analysts investigate a simulated breach while one player may secretly be the attacker planting false evidence.
