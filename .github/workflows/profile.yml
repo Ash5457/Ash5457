@@ -68,6 +68,7 @@ jobs:
             .button.exit{background:#f85149!important;color:#0d1117!important}
             pre{background:#0d1117!important;color:#c9d1d9!important;border:1px solid #30363d;border-top:none}
             .banner,footer{color:#8b949e!important}
+            footer{margin-top:-2.6em!important}
             .ps1-path{color:#3fb950!important;font-weight:bold}
             .ps1-location{color:#58a6ff!important}
             b{color:#e6edf3}
