@@ -54,8 +54,13 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
           config_timezone: America/Toronto
-          # GitHub dark palette, same as assets/header.svg. The attribute selectors
-          # remap GitHub's light-mode contribution greens for a dark background.
+          # Trim the extra bottom padding metrics adds by default (0, 8 + 11%).
+          # If the bottom of the image ever gets cut off, delete this line.
+          config_padding: 0, 8 + 4%
+          # GitHub dark palette, same as assets/header.svg.
+          # The template greys out the calendar by default; filter:none turns colour back on.
+          # The attribute selectors map GitHub's normal, Halloween and winter contribution
+          # colours to the same dark-mode greens, so seasonal themes don't change the look.
           extras_css: |
             .header{background:#161b22!important;height:30px!important;padding:0 10px!important;border:1px solid #30363d}
             .title{color:#8b949e!important;font-size:12px!important}
@@ -66,13 +71,14 @@ jobs:
             .ps1-path{color:#3fb950!important;font-weight:bold}
             .ps1-location{color:#58a6ff!important}
             b{color:#e6edf3}
+            .isocalendar svg{filter:none!important;margin-top:-28px!important;margin-bottom:-36px!important}
             span[style*="#ebedf0"]{color:#30363d!important}
-            span[style*="#9be9a8"],span[style*="#aceebb"]{color:#196c2e!important}
-            span[style*="#40c463"],span[style*="#4ac26b"]{color:#2ea043!important}
-            span[style*="#30a14e"],span[style*="#2da44e"]{color:#3fb950!important}
-            span[style*="#216e39"],span[style*="#116329"]{color:#56d364!important}
-            path[fill="#ebedf0"]{fill:#21262d}
-            path[fill="#9be9a8"],path[fill="#aceebb"]{fill:#0e4429}
-            path[fill="#40c463"],path[fill="#4ac26b"]{fill:#006d32}
-            path[fill="#30a14e"],path[fill="#2da44e"]{fill:#26a641}
-            path[fill="#216e39"],path[fill="#116329"]{fill:#39d353}
+            span[style*="#9be9a8"],span[style*="#aceebb"],span[style*="#ffee4a"],span[style*="#0a3069"]{color:#26a641!important}
+            span[style*="#40c463"],span[style*="#4ac26b"],span[style*="#ffc501"],span[style*="#0969da"]{color:#2ea043!important}
+            span[style*="#30a14e"],span[style*="#2da44e"],span[style*="#fe9600"],span[style*="#54aeff"]{color:#3fb950!important}
+            span[style*="#216e39"],span[style*="#116329"],span[style*="#03001c"],span[style*="#b6e3ff"]{color:#56d364!important}
+            path[fill="#ebedf0"]{fill:#1c2128}
+            path[fill="#9be9a8"],path[fill="#aceebb"],path[fill="#ffee4a"],path[fill="#0a3069"]{fill:#0e4429}
+            path[fill="#40c463"],path[fill="#4ac26b"],path[fill="#ffc501"],path[fill="#0969da"]{fill:#006d32}
+            path[fill="#30a14e"],path[fill="#2da44e"],path[fill="#fe9600"],path[fill="#54aeff"]{fill:#26a641}
+            path[fill="#216e39"],path[fill="#116329"],path[fill="#03001c"],path[fill="#b6e3ff"]{fill:#39d353}
