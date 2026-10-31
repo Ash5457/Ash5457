@@ -6,7 +6,7 @@
 -->
 
 <p align="center">
-  <img src="assets/header.svg" alt="ash@fedora running fastfetch: Akash Bahl, IT support moving into security. CompTIA A+ certified, working toward a Microsoft Azure/M365 cert. Windows Server AD and Tailscale labs. Keswick, Ontario. Open to helpdesk and junior SOC roles." />
+  <img src="assets/header.svg" alt="ash@fedora running fastfetch: Akash Bahl, IT support moving into security. CompTIA A+ certified, studying for Microsoft MD-102. Windows Server AD and Tailscale labs. Keswick, Ontario. Open to helpdesk and junior SOC roles." />
 </p>
 
 <p align="center">
