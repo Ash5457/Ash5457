@@ -6,7 +6,7 @@
 -->
 
 <p align="center">
-  <img src="assets/header.svg" alt="ash@fedora running fastfetch: Akash Bahl, IT support moving into security. CompTIA A+ certified, studying for Microsoft MD-102. Windows Server AD and Tailscale labs. Keswick, Ontario. Open to helpdesk and junior SOC roles." />
+  <img src="assets/header.svg" alt="ash@fedora running fastfetch: Akash Bahl, IT support and help desk. CompTIA A+ certified, AZ-104 next. Active Directory migration and Fedora hardening labs. Portfolio at ash5457.github.io. Keswick, Ontario. Open to full-time IT support roles." />
 </p>
 
 <p align="center">
@@ -26,18 +26,18 @@
 
 ### `$ cat about.txt`
 
-I learn by building on my own hardware, then writing up what broke and how I fixed it. Each writeup covers the goal, the setup, and the troubleshooting log.
+I learn by building on my own hardware, then writing up what broke and how I fixed it. Each writeup covers the goal, the setup, and the troubleshooting log. The full versions, with screenshots, are on my portfolio: **[ash5457.github.io](https://ash5457.github.io/)**
 
 ### `$ ls ~/projects`
-
-**[secure-remote-access](https://github.com/Ash5457/secure-remote-access)** · `RDP` `Tailscale` `WireGuard` `Windows Firewall` `Fedora`\
-Encrypted remote desktop from a Fedora laptop to a Windows 11 Pro machine over public Wi-Fi, with RDP never exposed to the internet. Walks through a layer-by-layer diagnosis of a Kerberos/NTLM logon failure and a routing conflict between two WireGuard-based tools.
 
 **[ad-lab](https://github.com/Ash5457/ad-lab)** · `Windows Server` `AD DS` `PowerShell` `Group Policy` `DNS`\
 An Active Directory domain built entirely from PowerShell scripts on Server 2016, then migrated side by side to Server 2025: schema extension, replication checks, all five FSMO roles transferred, a scream test with the old DC powered off, a clean demotion and the functional-level raise. Every step links to a screenshot or transcript, and the [troubleshooting log](https://github.com/Ash5457/ad-lab/blob/main/TROUBLESHOOTING.md) covers 11 problems, including a DC blue-screening mid-migration.
 
-**[fedora-hardening](https://github.com/Ash5457/fedora-hardening)** · `LUKS` `btrfs` `systemd` `firewalld` `SELinux` `Bash` · *in progress*\
-Auditing and hardening my daily-driver Fedora laptop across eight modules: disk, packages, logs, systemd, sudo, firewalld, SELinux and power. Each module records the findings, the changes, how I verified them and how to roll back. Every output is redacted and scanned for secrets by script before it is published. [Module 01](https://github.com/Ash5457/fedora-hardening/blob/main/01-disk-layout/NOTES.md) maps the LUKS2 and btrfs layout and backs up the LUKS header off-machine.
+**[secure-remote-access](https://github.com/Ash5457/secure-remote-access)** · `RDP` `Tailscale` `WireGuard` `Windows Firewall` `Fedora`\
+Encrypted remote desktop from a Fedora laptop to a Windows 11 Pro machine over public Wi-Fi, with RDP never exposed to the internet. Walks through a layer-by-layer diagnosis of a Kerberos/NTLM logon failure and a routing conflict between two WireGuard-based tools.
+
+**[fedora-hardening](https://github.com/Ash5457/fedora-hardening)** · `LUKS` `btrfs` `dnf` `journalctl` `systemd` `sudo` · *5 of 8 modules*\
+Auditing and hardening my daily-driver Fedora laptop, one module at a time. Done so far: the LUKS2 and btrfs disk layout with the LUKS header backed up off-machine, a package source audit with automatic security updates, investigating a boot error through the journal, a systemd timer that backs up my notes (restore tested), and a sudo least-privilege audit. firewalld, SELinux and power tuning are next. Every output is redacted and scanned for secrets by script before it's published.
 
 **[HackDetect](https://github.com/Ash5457/HackDetect)** · `Python` `OOP`\
 Terminal social deduction game built for a university game studies course. Analysts investigate a simulated breach while one player may secretly be the attacker planting false evidence.
@@ -50,4 +50,4 @@ Terminal social deduction game built for a university game studies course. Analy
 
 ### `$ ./contact.sh`
 
-[LinkedIn](https://www.linkedin.com/in/akashbahl-toronto/) · [akashbahl1926@gmail.com](mailto:akashbahl1926@gmail.com)
+[Portfolio](https://ash5457.github.io/) · [LinkedIn](https://www.linkedin.com/in/akashbahl-toronto/) · [akashbahl1926@gmail.com](mailto:akashbahl1926@gmail.com)

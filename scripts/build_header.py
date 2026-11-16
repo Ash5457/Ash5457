@@ -52,12 +52,13 @@ BANNER = """\
 # A value of None is filled in from the GitHub API at build time.
 INFO = [
     ("OS", "Fedora Linux · Hyprland"),
-    ("Role", "IT support → security"),
-    ("Certs", "CompTIA A+ {green:✓} · MD-102 {amber:(studying)}"),
+    ("Role", "IT support · help desk"),
+    ("Certs", "CompTIA A+ {green:✓} · AZ-104 {amber:(next)}"),
     ("Labs", "AD 2016→2025 migration · Fedora hardening"),
+    ("Site", "{blue:ash5457.github.io}"),
     ("Base", "Keswick, ON · York Region / GTA"),
     ("Latest", None),
-    ("Status", "{green:●} open to helpdesk & junior SOC roles"),
+    ("Status", "{green:●} open to full-time IT support roles"),
 ]
 # ----------------------------------------------------------------------------
 
